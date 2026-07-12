@@ -1,0 +1,15 @@
+AROMAS FLOR — WEB CON PANEL
+
+Esta carpeta contiene la web aprobada y su configuración para Pages CMS.
+
+Archivos principales:
+- index.html: web
+- content.json: contenido editable
+- .pages.yml: configuración del panel
+- assets/: fotos reales del sitio
+
+Publicación prevista: GitHub + Netlify (planes gratuitos, no prueba temporal).
+Panel previsto: Pages CMS conectado al repositorio de GitHub.
+
+Desde el panel se pueden cambiar textos, fotos de colecciones, destacados y la foto de Mi historia.
+El catálogo completo sigue en WhatsApp para no duplicar productos.

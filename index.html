@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Aromas Flor</title>
+<style>
+:root{--lino:#efe4d0;--crema:#f7f0e4;--marron:#542b20;--verde:#657055;--ambar:#d9782b;--terracota:#a65334}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--lino);color:var(--marron);font-family:Arial,sans-serif;line-height:1.55}
+header{position:sticky;top:0;z-index:5;background:rgba(239,228,208,.94);display:flex;align-items:center;justify-content:space-between;padding:10px 6%;border-bottom:1px solid rgba(84,43,32,.12)}
+.logo{width:125px}.menu{font-size:28px;background:none;border:0;color:var(--marron)}nav{display:none;position:absolute;right:5%;top:72px;background:var(--crema);padding:20px 28px;box-shadow:0 10px 30px #542b2030}
+nav.open{display:grid;gap:12px}nav a{color:var(--marron);text-decoration:none}
+.hero{min-height:78vh;display:grid;align-items:center;grid-template-columns:1fr 1fr;gap:5%;padding:5% 7%;background:var(--crema)}
+.hero img{width:100%;height:64vh;object-fit:cover;border-radius:120px 120px 18px 18px}
+h1,h2,h3{font-family:Georgia,serif;font-weight:normal}h1{font-size:clamp(40px,5vw,76px);line-height:1.05;margin:0 0 25px}
+.btn{display:inline-block;background:var(--ambar);color:white;text-decoration:none;padding:14px 23px;border-radius:30px;font-weight:bold}
+.welcome{padding:85px 8%;display:grid;grid-template-columns:1fr 1fr;gap:7%;align-items:center}
+.welcome img{width:100%;border-radius:18px}.welcome h2,.explora h2{font-size:48px;margin:0 0 15px}
+.explora{padding:70px 6%;background:var(--crema)}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{position:relative;min-height:430px;overflow:hidden;border-radius:18px}.card:first-child{grid-row:span 2}.card img{width:100%;height:100%;position:absolute;object-fit:cover}
+.card:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#32170dcc)}
+.card div{position:absolute;z-index:2;bottom:24px;left:25px;color:white}.card h3{font-size:35px;margin:0}.card span{font-size:15px}
+.pause{padding:100px 12%;text-align:center;font:italic 32px Georgia,serif;color:var(--verde)}
+.story{padding:80px 8%;background:var(--terracota);color:white;text-align:center}.story h2{font-size:48px}
+.end{padding:100px 8%;text-align:center}.end h2{font-size:45px}
+footer{padding:35px 6%;background:var(--marron);color:var(--lino);text-align:center}
+@media(max-width:720px){.hero,.welcome{grid-template-columns:1fr}.hero{padding:25px 22px 45px}.hero img{height:48vh;order:-1;border-radius:90px 90px 16px 16px}h1{font-size:43px}.welcome{padding:60px 22px}.welcome h2,.explora h2{font-size:39px}.grid{grid-template-columns:1fr}.card,.card:first-child{min-height:420px;grid-row:auto}.pause{font-size:26px;padding:75px 30px}.story h2,.end h2{font-size:38px}}
+</style>
+<style>
+.destacados{padding:70px 6%;background:#efe4d0}
+.destacados h2{text-align:center;font-size:44px;margin:0 0 30px}
+.dest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.dest-grid article{background:#f7f0e4;border-radius:16px;overflow:hidden;padding-bottom:20px;text-align:center}
+.dest-grid img{width:100%;height:360px;object-fit:cover;display:block}
+.dest-grid h3{font-size:25px;margin:18px 14px 12px}
+.dest-grid a{color:#a65334;text-decoration:none;font-weight:bold}
+.arte-card img{object-position:center 42%}
+@media(max-width:720px){
+ .destacados{padding:55px 18px}
+ .destacados h2{font-size:36px}
+ .dest-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+ .dest-grid img{height:235px}
+ .dest-grid h3{font-size:20px}
+}
+</style>
+<style>
+/* CABECERA CORREGIDA */
+header {
+ position:absolute!important; top:0; left:0; right:0; z-index:10;
+ background:transparent!important; border:0!important;
+ justify-content:flex-end!important; padding:14px 18px!important;
+}
+header>.logo{display:none!important}
+header .menu{
+ background:rgba(247,240,228,.88); width:46px; height:46px;
+ border-radius:50%; box-shadow:0 3px 12px rgba(84,43,32,.16)
+}
+.hero-banner{
+ min-height:76vh!important; display:flex!important; align-items:center!important;
+ padding:82px 7% 55px!important; position:relative; overflow:hidden;
+ background-image:linear-gradient(90deg,rgba(247,240,228,.94) 0%,rgba(247,240,228,.80) 35%,rgba(247,240,228,.10) 70%),url("assets/image-01-6d87fb9d6a.png")!important;
+ background-size:cover!important; background-position:center!important;
+}
+.hero-banner .hero-copy{width:min(520px,44%); position:relative; z-index:2}
+.banner-logo{width:260px; max-width:75%; display:block; margin:0 0 22px; mix-blend-mode:multiply}
+.hero-banner h1{font-size:clamp(34px,3.4vw,56px)!important}
+@media(max-width:720px){
+ .hero-banner{
+   min-height:68vh!important; padding:76px 22px 38px!important;
+   align-items:flex-end!important;
+   background-image:linear-gradient(90deg,rgba(247,240,228,.94) 0%,rgba(247,240,228,.72) 46%,rgba(247,240,228,.05) 78%),url("assets/image-01-6d87fb9d6a.png")!important;
+   background-size:cover!important;
+   background-position:58% center!important;
+ }
+ .hero-banner .hero-copy{width:64%!important}
+ .banner-logo{width:190px!important; max-width:100%!important; margin-bottom:16px!important}
+ .hero-banner h1{font-size:27px!important; line-height:1.08!important; margin-bottom:18px!important}
+ .hero-banner .btn{font-size:14px;padding:11px 16px}
+}
+</style>
+<style>
+/* FIX MOBILE: banner compacto, logo completo sin recorte */
+@media(max-width:720px){
+  .hero-banner{
+    min-height:520px!important;
+    height:520px!important;
+    padding:68px 20px 28px!important;
+    align-items:flex-end!important;
+    background-position:58% center!important;
+  }
+  .hero-banner .hero-copy{
+    width:58%!important;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .banner-logo{
+    width:170px!important;
+    max-width:100%!important;
+    height:auto!important;
+    border-radius:0!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    margin:0!important;
+    mix-blend-mode:multiply!important;
+  }
+  .hero-banner h1{
+    margin:auto 0 14px!important;
+    font-size:21px!important;
+    line-height:1.14!important;
+  }
+  .hero-banner .btn{
+    font-size:13px!important;
+    padding:10px 14px!important;
+    white-space:nowrap;
+  }
+}
+</style>
+<style>
+@media(max-width:720px){
+  .hero-banner{
+    display:block !important;
+    min-height:auto !important;
+    padding:0 !important;
+    background:#efe3cf !important;
+  }
+  .hero-banner .hero-copy,
+  .hero-banner > img{display:none !important;}
+  .hero-banner::before{
+    content:"";
+    display:block;
+    width:100%;
+    aspect-ratio:1320/945;
+    background-image:url("assets/image-02-0a6a074ca6.jpg");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+}
+</style>
+<style>.story-real{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0!important;text-align:left!important;align-items:stretch}.story-real .story-copy{padding:70px 8%;align-self:center}.story-real img{width:100%;height:100%;min-height:540px;object-fit:cover;object-position:center}.story-link{display:inline-block;margin-top:12px;color:white;font-weight:bold;text-decoration:none;border-bottom:1px solid white}.closing{font:italic 25px Georgia,serif;margin:0 0 28px}@media(max-width:720px){.story-real{grid-template-columns:1fr}.story-real .story-copy{padding:55px 24px}.story-real img{min-height:0;height:430px;object-position:center 30%}.dest-grid{grid-template-columns:1fr 1fr!important}.dest-grid img{height:245px!important}.dest-grid h3{font-size:19px!important;line-height:1.2}.closing{font-size:21px}}</style>
+<style>
+/* ÚNICO AJUSTE: reducir el espacio vertical tras el banner en móvil */
+@media(max-width:720px){
+  .welcome{padding:18px 22px 28px !important; gap:18px !important;}
+}
+</style>
+<style>@media(max-width:720px){.welcome{padding:38px 22px!important;gap:24px!important}.welcome h2{margin-bottom:8px!important}.welcome p{margin:0 0 11px!important;line-height:1.45!important}}</style><style>@media(max-width:720px){.explora{padding:48px 18px!important}.grid{gap:14px!important}.card,.card:first-child{min-height:320px!important;height:320px!important}.card h3{font-size:29px!important}}</style><style>/* Ajuste puntual sobre la última versión funcional */@media(max-width:720px){.hero-banner{margin-bottom:0!important}.welcome{padding-top:8px!important;padding-bottom:28px!important;margin-top:0!important;gap:18px!important}}</style></head>
+<body>
+<header><img alt="Aromas Flor" class="logo" src="assets/image-03-1b6eaba028.jpg"/><button aria-label="Abrir menú" class="menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+<nav><a href="#">Inicio</a><a href="#explora">Explorá</a><a href="#historia">Mi historia</a><a href="#contacto">Contacto</a></nav></header>
+<section class="hero hero-banner">
+<div class="hero-copy">
+<img alt="Aromas Flor" class="banner-logo" data-image="hero_logo" src="assets/image-03-1b6eaba028.jpg"/>
+<h1 data-content="hero_title">Bienestar que se siente,<br/>aromas que cuentan historias,<br/>joyas naturales con propósito.</h1>
+<a class="btn" data-content="hero_button" href="#explora">Explorar el catálogo</a>
+</div>
+</section>
+<section class="welcome">
+<img alt="Bienvenida a Aromas Flor" data-image="welcome_image" src="assets/image-04-0310e71f12.jpg"/>
+<div><h2 data-content="welcome_title">Pasá.</h2><p data-content="welcome_p1">Me alegra que estés acá.</p><p data-content="welcome_p2">Preparé este espacio con el mismo cuidado con el que elijo cada piedra, cada aroma y cada objeto que forma parte de Aromas Flor.</p><p data-content="welcome_p3">Recorré sin apuro. Habitá este momento. Date permiso para hacer una pausa.</p><p data-content="welcome_p4">Tal vez descubras que el bienestar también nace en los rituales cotidianos, en la naturaleza y en la belleza de las cosas simples.</p></div>
+</section>
+<section class="explora" id="explora"><h2>Explorá</h2>
+<div class="grid">
+<article class="card"><img data-image="collection_1_image" src="assets/image-05-7126ea30b4.png"/><div><h3 data-content="collection_1_title">Joyas Naturales</h3><span data-content="collection_1_button">Ver colección →</span></div></article>
+<article class="card"><img data-image="collection_2_image" src="assets/image-06-67b71c0cd7.jpg"/><div><h3 data-content="collection_2_title">Ámbar Báltico</h3><span data-content="collection_2_button">Ver colección →</span></div></article>
+<article class="card"><img data-image="collection_3_image" src="assets/image-07-0a0f048948.jpg"/><div><h3 data-content="collection_3_title">Aromatización y Ritual</h3><span data-content="collection_3_button">Explorar →</span></div></article>
+<article class="card"><img data-image="collection_4_image" src="assets/image-08-81b0f2c861.jpg"/><div><h3 data-content="collection_4_title">Cerámica y Decoración</h3><span data-content="collection_4_button">Descubrir →</span></div></article>
+<article class="card"><img data-image="collection_5_image" src="assets/image-09-a9cd5ac0ae.jpg"/><div><h3 data-content="collection_5_title">Arte</h3><span data-content="collection_5_button">Ver obras →</span></div></article>
+</div></section>
+<section class="destacados"><h2>Elegidos para acompañarte</h2><div class="dest-grid"><article><img alt="Collar de Ámbar Báltico con corazón" data-image="featured_1_image" src="assets/image-10-016ed3389f.webp"/><h3 data-content="featured_1_title">Collar de Ámbar Báltico con corazón</h3><a data-content="featured_1_button" href="#contacto">Ver en WhatsApp</a></article><article><img alt="Pulseras regulables de piedras naturales" data-image="featured_2_image" src="assets/image-11-3c9ea63086.jpg"/><h3 data-content="featured_2_title">Pulseras regulables de piedras naturales</h3><a data-content="featured_2_button" href="#contacto">Ver en WhatsApp</a></article><article><img alt="Esencias para hornillo" data-image="featured_3_image" src="assets/image-12-99dd8830a8.jpg"/><h3 data-content="featured_3_title">Esencias para hornillo</h3><a data-content="featured_3_button" href="#contacto">Ver en WhatsApp</a></article><article><img alt="Hornillo a vela" data-image="featured_4_image" src="assets/image-13-1ea846a43c.jpg"/><h3 data-content="featured_4_title">Hornillo a vela</h3><a data-content="featured_4_button" href="#contacto">Ver en WhatsApp</a></article><article><img alt="Vela Luxe labrada en caja · 5 × 7 cm" data-image="featured_5_image" src="assets/image-14-1ebb8c2b02.jpg"/><h3 data-content="featured_5_title">Vela Luxe labrada en caja · 5 × 7 cm</h3><a data-content="featured_5_button" href="#contacto">Ver en WhatsApp</a></article><article><img alt="Pedidos listos con amor 🌿✨" data-image="featured_6_image" src="assets/image-15-3b590f068a.jpg"/><h3 data-content="featured_6_title">Pedidos listos con amor 🌿✨</h3><a data-content="featured_6_button" href="#contacto">Armá tu pedido</a></article></div></section>
+<section class="pause" data-content="pause_text">“La naturaleza nos recuerda que el bienestar también habita en las cosas simples.”</section>
+<section class="story story-real" id="historia"><div class="story-copy"><h2 data-content="story_title">Hola, soy Flor 🪷</h2><p data-content="story_p1">Creadora de Aromas Flor 🌿✨</p><p data-content="story_p2">Amo los minerales y las piedras desde hace varios años. Mi conexión con ellas comenzó en un taller de meditación, donde descubrí la energía tan especial que pueden transmitir.</p><p data-content="story_p3">Entre aromas, rituales y minerales fui dando forma a este espacio y a una manera muy personal de elegir cada pieza.</p><a class="story-link" data-content="story_button" href="#">Conocer mi historia</a></div><img alt="Flor, creadora de Aromas Flor" data-image="story_image" src="assets/image-16-90259f25bf.jpg"/></section>
+<section class="end" id="contacto"><h2 data-content="closing_title">Que siempre encuentres el camino para volver a lo que te hace bien, gracias por elegir Los Aromas y lo hecho con intención.</h2><p class="closing" data-content="closing_text">Te invito a explorar el catálogo completo en WhatsApp 🪷</p><a class="btn" data-content="closing_button" href="#">Explorar el catálogo completo</a></section>
+<footer data-content="footer_text">Aromas Flor · joyas naturales 🌿✨ · @aromasflorjoyas</footer>
+<script>fetch('content.json').then(r=>r.json()).then(c=>{document.querySelectorAll('[data-content]').forEach(e=>{const k=e.dataset.content;if(c[k]!==undefined)e.textContent=c[k]});document.querySelectorAll('[data-image]').forEach(e=>{const k=e.dataset.image;if(c[k])e.src=c[k]})}).catch(()=>{});</script></body></html>
