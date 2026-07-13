@@ -142,3 +142,31 @@ footer#contacto .footer-contact {
 .hero-nav-contacto{left:80.7%;width:6.2%}
 .hero-nav-whatsapp{left:89.2%;width:4.2%}
 html{scroll-behavior:smooth}
+
+
+/* Footer compacto aprobado para móvil: marca arriba, Ayuda y Contacto en dos columnas */
+@media (max-width: 760px) {
+  footer#contacto {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 24px;
+    row-gap: 20px;
+    align-items: start;
+  }
+  footer#contacto .footer-brand {
+    grid-column: 1 / -1;
+  }
+  footer#contacto .footer-help,
+  footer#contacto .footer-contact {
+    margin: 0;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  footer#contacto {
+    grid-template-columns: 1fr;
+  }
+  footer#contacto .footer-brand {
+    grid-column: auto;
+  }
+}
