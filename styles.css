@@ -124,20 +124,21 @@ footer#contacto .footer-contact {
   }
 }
 
-/* Zonas funcionales sobre la botonera dibujada en el banner aprobado */
+/* Zonas funcionales sobre la botonera dibujada en el banner aprobado.
+   Coordenadas medidas sobre la imagen aprobada de 1536 px. */
 .hero-nav-hotspots a{
   position:absolute;
-  top:4.8%;
-  height:7.2%;
+  top:2.5%;
+  height:8%;
   z-index:4;
   border-radius:8px;
   text-indent:-9999px;
   overflow:hidden;
 }
-.hero-nav-inicio{left:20.5%;width:8%}
-.hero-nav-explora{left:30%;width:9%}
-.hero-nav-historia{left:41%;width:12%}
-.hero-nav-instagram{left:55%;width:11%}
-.hero-nav-contacto{left:68%;width:10%}
-.hero-nav-whatsapp{left:80.5%;width:7%}
+.hero-nav-inicio{left:47.2%;width:4.2%}
+.hero-nav-explora{left:53.5%;width:5.5%}
+.hero-nav-historia{left:61.5%;width:7.5%}
+.hero-nav-instagram{left:71.5%;width:6.8%}
+.hero-nav-contacto{left:80.7%;width:6.2%}
+.hero-nav-whatsapp{left:89.2%;width:4.2%}
 html{scroll-behavior:smooth}
