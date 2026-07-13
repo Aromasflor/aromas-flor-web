@@ -123,3 +123,21 @@ footer#contacto .footer-contact {
     grid-column: auto;
   }
 }
+
+/* Zonas funcionales sobre la botonera dibujada en el banner aprobado */
+.hero-nav-hotspots a{
+  position:absolute;
+  top:4.8%;
+  height:7.2%;
+  z-index:4;
+  border-radius:8px;
+  text-indent:-9999px;
+  overflow:hidden;
+}
+.hero-nav-inicio{left:20.5%;width:8%}
+.hero-nav-explora{left:30%;width:9%}
+.hero-nav-historia{left:41%;width:12%}
+.hero-nav-instagram{left:55%;width:11%}
+.hero-nav-contacto{left:68%;width:10%}
+.hero-nav-whatsapp{left:80.5%;width:7%}
+html{scroll-behavior:smooth}
